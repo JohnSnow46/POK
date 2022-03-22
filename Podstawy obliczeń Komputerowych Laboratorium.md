@@ -1,5 +1,5 @@
 # Podstawy obliczeń Komputerowych Laboratorium 
-![Build Status](data:https://pokoleniew.pl/files/news/pwr-logo.png)
+![PWrLogo](http://www.ib.pwr.edu.pl/sawicki/logo%20pwr.png)
 ## Czonkowie grupy
 •	Franciszek Kuna 253220	
 •	Michał Celiński 253214		

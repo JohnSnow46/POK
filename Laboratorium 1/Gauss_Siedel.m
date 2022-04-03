@@ -1,7 +1,7 @@
 clear all;
 clc;
-%% Metoda Gaussa Seidela
 
+%% Metoda Gaussa Seidela
 
 A=[2 1 1 -1; 1 1 -1 1; 1 1 1 1; -1 2 -1 1]
 b=[3 4 10 4]'

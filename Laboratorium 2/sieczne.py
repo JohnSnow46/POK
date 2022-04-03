@@ -1,24 +1,42 @@
 import math
 
+# Defining Function
+
 def f(x):
+    #return  -(math.sin(x)*math.sin(x)) + x + math.log(x,10)
+    return  -math.sin(x) + x*x + math.log(x,10)
 
-    y = x*x + math.log(x)
-    return y
+# Implementing Secant Method
 
-def metoda(a,b,delta,dokl):
+def secant(x0, x1, e, N):
+    print('\n\n*** SECANT METHOD IMPLEMENTATION ***')
+    step = 1
+    condition = True
+    while condition:
+        if f(x0) == f(x1):
+            print('Divide by zero error!')
+            break
 
-    while delta > dokl:
-        x1 = a - f(a) * ((b-a)/(f(b) - f(a)))
-        if f(x1)*f(a) > 0:
-            a = x1
-        else:
-            b = x1
-        delta = abs(f(x1))
-        print("x1={:.2f} a={:.2f} b={:.7f} c={:.7f} ".format(x1,a,b,delta))
-        return [x1,a,b,delta]
-x1_start = 0.4
-x2_start = 5.0
-delta_0 = 10000.0
-dokl_fin = 0.00001
-res = metoda(x1_start, x2_start, delta_0, dokl_fin)
-print("\n \n \n final result: x1.{:.2} a={:.7f} b={:.7f} c={:.2f} ".format(res[0],res[1],res[2], res[3]))
+        x2 = x0 - (x1 - x0) * f(x0) / (f(x1) - f(x0))
+        print('Iteration-%d, x2 = %0.6f and f(x2) = %0.6f' % (step, x2, f(x2)))
+        x0 = x1
+        x1 = x2
+        step = step + 1
+
+        if step > N:
+            print('Not Convergent!')
+            break
+
+        condition = abs(f(x2)) > e
+    print('\n Required root is: %0.8f' % x2)
+
+
+# Input Section
+x0 = float(0.01)
+x1 = float(0.94)
+e = float(0.000001)
+N = int(10)
+
+# Starting Secant Method
+secant(x0, x1, e, N)
+

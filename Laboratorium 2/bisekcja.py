@@ -1,7 +1,8 @@
 # Defining Function
 import math
 def f(x):
-    return  -(math.sin(x)*math.sin(x)) + x + math.log(x,10)
+    #return  -(math.sin(x)*math.sin(x)) + x + math.log(x,10)
+    return  -math.sin(x) + x*x + math.log(x,10)
 
 
 # Implementing Bisection Method
@@ -26,7 +27,7 @@ def bisection(x0, x1, e):
 
 # Input Section
 x0 = 0.01
-x1 = 0.9
+x1 = 1
 e = 0.0001
 
 # Converting input to float

@@ -1,7 +1,7 @@
 clear all;
 clc;
 
-%% Metoda Gaussa Seidela
+%% Gauss-Seidel method
 
 A=[2 1 1 -1; 1 1 -1 1; 1 1 1 1; -1 2 -1 1]
 b=[3 4 10 4]'
@@ -32,4 +32,4 @@ while normVal>tol
     normVal=norm(x_old-x);
 end
 %%
-fprintf('Rozwiazanie ukladu równań: \n%f\n%f\n%f\n%f in %d iterations',x,itr);
+fprintf('\n%f\n%f\n%f\n%f in %d iterations',x,itr);

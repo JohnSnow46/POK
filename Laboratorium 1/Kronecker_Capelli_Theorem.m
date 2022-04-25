@@ -28,7 +28,7 @@ if (rankA==rankP) && (rankP==UnknownValues)
     disp('Only one solution: ')
     disp(X)
 elseif (rankP==rankA && rankA<UnknownValues)
-    disp('inifinite numbers of solutions ')
+    disp('inifinite numbers of solutions ') 
 else
     disp('zero solutions')
 end
